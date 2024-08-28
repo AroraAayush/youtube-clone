@@ -47,7 +47,7 @@ function SideBar() {
     dispatch(changeCategoryStore(category));
   }
   return (
-    <div className='overflow-y-scroll scrollbar-none h-full flex flex-col justify-start items-center w-44 gap-y-4 bg-black border-r-2 border-white/25 rounded-r-lg rounded-t-lg p-2 pt-4'>
+    <div className='shrink-0 overflow-y-scroll scrollbar-none h-full flex flex-col justify-start items-center w-44 gap-y-4 bg-black border-r-2 border-white/25 rounded-r-lg rounded-t-lg p-2 pt-4'>
       {sideBarItems && sideBarItems.map((item)=>(
         <div key={item.name} onClick={()=>changeCategory(item)} className={`cursor-pointer w-full flex flex-row items-center gap-x-2 ${selectedCategory.name==item.name?"bg-red-600":""} hover:bg-red-600 rounded-xl px-3 py-2`}>
           {giveIcon(item.category)}
