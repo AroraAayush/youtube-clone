@@ -3,7 +3,8 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
-import { Header,Footer,Home, ChannelPage } from './components/index'
+import { Header,Footer,Home, ChannelPage, SearchedPage,VideoDetail} from './components/index'
+
 
 function App() {
   return (
@@ -13,14 +14,16 @@ function App() {
       </div>
       
      
-    <Header/>
     <BrowserRouter>
+    <Header/>
     <Routes>
 <Route path='/' element={<Home/>} />
 <Route path='/channel/:channelId' element={<ChannelPage/>} />
+<Route path='/search/:searched' element={<SearchedPage/>} />
+<Route path='/video/:videoId' element={<VideoDetail/>} />
     </Routes>
-    </BrowserRouter>
     <Footer/>
+    </BrowserRouter>
     </div>
   )
 }

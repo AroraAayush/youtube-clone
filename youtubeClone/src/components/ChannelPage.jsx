@@ -31,7 +31,7 @@ function ChannelPage() {
       {channelDetails && channelDetails.items  && <ChannelCard channel={channelDetails.items[0]} channelPage={true}/>}
       {channelVideos && channelVideos.items && 
       <div className='mt-3 mb-24 flex flex-wrap gap-x-6  gap-y-6 justify-start items-start mx-2'>{channelVideos?.items.map((video)=>(
-        <VideoCard key={video.id.videoId} video={video.snippet}/>
+        <VideoCard key={video.id.videoId} video={video}/>
       ))}</div>}
     </div>
   )

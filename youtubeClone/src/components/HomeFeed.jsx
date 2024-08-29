@@ -24,7 +24,7 @@ function HomeFeed() {
     <div className='overflow-y-scroll overflow-x-hidden scrollbar-none  flex flex-wrap gap-x-6  gap-y-4 justify-center items-center mx-2'>
       {videos && videos.items && videos.items.map((video)=>(
         <>
-        {video.id.videoId &&<VideoCard key={video.id.videoId} video={video.snippet}/>}
+        {video.id.videoId &&<VideoCard key={video.id.videoId} video={video}/>}
         {video.id.channelId &&<ChannelCard key={video.id.channelId} channel={video}/>}
         </>
       ))}
