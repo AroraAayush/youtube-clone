@@ -43,7 +43,7 @@ function SideBar() {
   const [selectedCategory,setSelectedCategory]=useState(storeCategory);
   const changeCategory=(category)=>{
     setSelectedCategory(category);
-    console.log("changin cateogty in store")
+    //console.log("changin cateogty in store")
     dispatch(changeCategoryStore(category));
   }
   return (

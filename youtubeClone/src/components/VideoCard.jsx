@@ -13,7 +13,7 @@ function VideoCard({video}) {
         <span className='cursor-pointer w-80 max-h-14 leading-relaxed overflow-hidden text-left block text-wrap text-base font-semibold tracking-wider '>
             {video?.snippet.title}
         </span>
-        <Link to={`/channel/${video?.snippet?.channelId}`}><span className=' cursor-pointer w-80  text-left  text-sm font-normal flex flex-row gap-x-1 items-center'>
+        <Link to={`/channel/${video.snippet.channelId}`}><span className=' cursor-pointer w-80  text-left  text-sm font-normal flex flex-row gap-x-1 items-center'>
             <span>{video?.snippet.channelTitle}</span>
             <GoVerified className='text-base pt-1'/>
         </span></Link>

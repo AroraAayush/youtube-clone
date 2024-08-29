@@ -1,4 +1,5 @@
-export const BASEURL='https://youtube-v31.p.rapidapi.com';
+// export const BASEURL='https://youtube-v31.p.rapidapi.com';
+export const BASEURL='https://youtube-v3-lite.p.rapidapi.com';
 
 
 export const options={ 
@@ -6,7 +7,8 @@ export const options={
 
 headers: {
   'x-rapidapi-key': String(import.meta.env.VITE_RAPID_API_KEY),
-  'x-rapidapi-host': 'youtube-v31.p.rapidapi.com'
+  // 'x-rapidapi-host': 'youtube-v31.p.rapidapi.com'
+  'x-rapidapi-host': 'youtube-v3-lite.p.rapidapi.com'
 }
 }
 
