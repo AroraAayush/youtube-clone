@@ -26,10 +26,10 @@ function SearchedPage() {
       <div className=' ml-5 text-4xl font-bold'>Search Results for <span className='text-red-600 capitalize'>{searched}</span> </div>
       {loading==true?<div className='w-full h-full flex justify-center items-center'><Loader/></div>:<>
         {searchedVideos && searchedVideos.items && 
-      <div className=' mt-3 mb-24 flex flex-wrap gap-x-6  gap-y-6 justify-start items-start mx-2'>
+      <div className=' mt-3 mb-24 flex flex-wrap xl:gap-x-6:gap-y-4 lg:gap-x-4:gap-y-3 md:gap-x-3:gap-y-2 justify-center items-start mx-2'>
         {searchedVideos && searchedVideos.items && searchedVideos.items.map((video)=>(
         <>
-        {video.id.videoId &&<VideoCard key={video.id.videoId} video={video}/>}
+        {video.id.videoId &&<VideoCard key={video.id.videoId} video={video} isHomePage={false}/>}
         {video.id.channelId &&<ChannelCard key={video.id.channelId} channel={video} channelPage={false}/>}
         </>
       ))}

@@ -47,7 +47,7 @@ function VideoDetail() {
 <div className='text-2xl font-bold pl-4 mb-3'><span className='text-red-600'>Related </span>  Videos</div>
   {relatedVideos && relatedVideos.items && <div className=' overflow-y-scroll scrollbar-none h-full w-full  flex flex-wrap justify-center items-center '>{relatedVideos.items.map((video)=>(
     <div key={video.id.videoId}>
-      <VideoCard video={video}/>
+      <VideoCard video={video} isHomePage={false}/>
     </div>
   ))}</div>}
 </div>

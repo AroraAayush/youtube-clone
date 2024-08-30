@@ -47,9 +47,9 @@ function SideBar() {
     dispatch(changeCategoryStore(category));
   }
   return (
-    <div className='shrink-0 overflow-y-scroll scrollbar-none h-full flex flex-col justify-start items-center w-44 gap-y-4 bg-black border-r-2 border-white/25 rounded-r-lg rounded-t-lg p-2 pt-4'>
+    <div className='shrink-0 md:overflow-y-scroll overflow-x-scroll scrollbar-none md:h-full w-full flex md:flex-col flex-row justify-start  items-center md:w-44 md:gap-y-4 gap-x-4 bg-black border-r-2 border-white/25 rounded-r-lg rounded-t-lg p-2 pt-4'>
       {sideBarItems && sideBarItems.map((item)=>(
-        <div key={item.name} onClick={()=>changeCategory(item)} className={`cursor-pointer w-full flex flex-row items-center gap-x-2 ${selectedCategory.name==item.name?"bg-red-600":""} hover:bg-red-600 rounded-xl px-3 py-2`}>
+        <div key={item.name} onClick={()=>changeCategory(item)} className={`w-32 shrink-0 cursor-pointer md:w-full flex flex-row md:justify-start justify-center items-center gap-x-2 ${selectedCategory.name==item.name?"bg-red-600":""} hover:bg-red-600 rounded-xl px-3 md:py-2 py-3`}>
           {giveIcon(item.category)}
           <div className='text-white capitalize text-base font-semibold '>{item.name}</div>
         </div>
