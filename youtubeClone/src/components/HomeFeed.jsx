@@ -24,7 +24,7 @@ function HomeFeed() {
   return (
 <div className='md:w-[calc(100%-11rem)] w-screen md:h-[calc(100%-15px)] h-[calc(100%-5rem)] flex flex-col justify-start items-start gap-y-8'>
 <div className='w-full ml-5 text-4xl font-bold md:mt-0 mt-3'><span className='text-red-600 capitalize'>{category.name}</span> Videos</div>
-    <div className='w-full h-full  overflow-y-scroll overflow-x-hidden scrollbar-none   flex flex-wrap xl:gap-x-6:gap-y-4 lg:gap-x-4:gap-y-3 md:gap-x-3:gap-y-2 justify-center items-center mx-2'>
+    <div className='w-full h-full  overflow-y-scroll overflow-x-hidden scrollbar-none   flex flex-wrap xl:gap-x-6:gap-y-4 lg:gap-x-4:gap-y-3 md:gap-x-3:gap-y-2 sm:gap-x-3:gap-y-2 xs:md:gap-y-3 justify-center items-center mx-2'>
       {loading==true?<div className='w-full h-full flex justify-center items-center'><Loader/></div>:<>
         {videos && videos.items && videos.items.map((video)=>(
         <>

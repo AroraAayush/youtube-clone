@@ -15,7 +15,7 @@ function SearchBar() {
   return (
     <div className='flex items-center'>
       <button onClick={handleSearch} className='text-black bg-white rounded-l-xl px-3 min-h-9 '><IoSearchSharp className='text-xl' /></button>
-      <input type="search" className='text-black outline-none mr-12 w-80 px-1 min-h-9 rounded-r-xl' placeholder='Type to search...' value={searched} onChange={(e)=>{setSearched(e.target.value)}}/>
+      <input type="search" className='text-black outline-none mr-2 md:mr-8 lg:mr-12 w-52 sm:w-64 md:w-72 lg:w-80 px-1 min-h-9 rounded-r-xl' placeholder='Type to search...' value={searched} onChange={(e)=>{setSearched(e.target.value)}}/>
     </div>
   )
 }

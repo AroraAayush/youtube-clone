@@ -34,7 +34,7 @@ function ChannelPage() {
       {loading==true?<div className='w-full h-full flex justify-center items-center'><Loader/></div>:<><div className='min-h-1/4 h-1/4 bg-gradient-to-r from-indigo-500 to-cyan-500 '></div>
       {channelDetails && channelDetails.items  && <ChannelCard channel={channelDetails.items} channelPage={true}/>}
       {channelVideos && channelVideos.items && 
-      <div className='mt-3 mb-24 flex flex-wrap xl:gap-x-6:gap-y-4 lg:gap-x-4:gap-y-3 md:gap-x-3:gap-y-2 justify-center  mx-2'>{channelVideos?.items.map((video)=>(
+      <div className=' w-screen mt-3 mb-24 flex flex-wrap xl:gap-x-6:gap-y-4 lg:gap-x-4:gap-y-3 mlg:gap-x-4:gap-y-3 md:gap-x-3:gap-y-2 sm:gap-x-3:gap-y-2 gap-y-3 justify-center px-2'>{channelVideos?.items.map((video)=>(
         <VideoCard key={video.id.videoId} video={video} isHomePage={false}/>
       ))}</div>}</>}
       
@@ -43,3 +43,10 @@ function ChannelPage() {
 }
 
 export default ChannelPage
+
+
+// 'xs':'450px',
+// 'sm': '600px',
+// 'md': '768px',
+// 'lg': '1024px',
+// 'xl': '1300px',
